@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.header`
     padding: 0 20px;
     box-sizing: border-box;
     position: relative;
-    margin: 112px auto 68px auto;
+    margin: 90px auto 40px auto;
 
     &::before {
         content: '';
