@@ -24,6 +24,7 @@ export const HeaderWrapper = styled.header`
 
     @media (max-width: 1540px) {
         max-width: 1360px;
+        margin-top: 70px;
 
         &::before {
             content: '';
