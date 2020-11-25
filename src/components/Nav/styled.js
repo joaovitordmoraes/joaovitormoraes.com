@@ -7,6 +7,10 @@ export const MenuLinksList = styled.ul`
     font-family: var(--font-krona);
     font-size: var(--size-xsmall);
     display: flex;
+
+    @media (max-width: 1540px) {
+        font-size: var(--size-one);
+    }
 `
 
 export const MenuLinksItem = styled.li`

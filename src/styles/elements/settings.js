@@ -21,6 +21,8 @@ const Variables = createGlobalStyle`
         --size-large: 7rem;
         --size-xlarge: 12rem;
 
+        --size-one: 1.7rem;
+        --size-two: 10rem;
     }
 `
 
