@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-export const MenuLinksWrapper = styled.nav``
+export const MenuLinksWrapper = styled.nav`
+    background-color: var(--color-one);
+    padding-left: 52px;
+    z-index: 1;
+`
 
 export const MenuLinksList = styled.ul`
     font-family: var(--font-krona);
