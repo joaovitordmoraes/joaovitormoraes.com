@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HeaderWrapper = styled.header`
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     max-width: 1520px;
     width: 100%;
     padding: 0 20px;
@@ -17,7 +17,7 @@ export const HeaderWrapper = styled.header`
         left: 20px;
         top: 50%;
         transform: translateY(-50%);
-        width: 70%;
+        width: calc(100% - 40px);
         height: 1px;
         background-color: var(--color-two);
     }
@@ -25,16 +25,5 @@ export const HeaderWrapper = styled.header`
     @media (max-width: 1540px) {
         max-width: 1360px;
         margin-top: 70px;
-
-        &::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 65%;
-            height: 1px;
-            background-color: var(--color-two);
-        }
     }
 `
