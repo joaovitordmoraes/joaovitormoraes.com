@@ -13,6 +13,10 @@ const Variables = createGlobalStyle`
         --color-four: #00F8FF;
         --color-five: #ADFF92;
 
+        --color-gradient-01: #1B2324;
+        --color-gradient-02: #18393A;
+        --color-gradient-03: #135C5E;
+
         --size-base: 10px;
         --size-xsmall: 2rem;
         --size-small: 2.2rem;
