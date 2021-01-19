@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import img from '../../../public/images/bg-portfolio.png'
+import img from '../../images/bg-portfolio.png'
 
 export const HomeSection = styled.section`
     font-family: var(--font-krona);
