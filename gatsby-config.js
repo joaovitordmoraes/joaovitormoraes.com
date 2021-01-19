@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Meu site`,
-    description: `Meu portfólio com meus trabalhos na área de front-end.`,
+    title: `João Vitor`,
+    description: `Trabalho na área de Desenvolvimento Front-End desde 2011 e desde então eu crio sites, landing pages e páginas interativas para eventos. Ultimamente tenho estudado muito sobre ReactJS, aplicando o que aprendo em alguns projetos pessoais.`,
     author: `@joaovitordmoraes`,
   },
   plugins: [

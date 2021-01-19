@@ -10,8 +10,8 @@ export const AboutWrapper = styled.section`
     align-items: center;
     justify-content: space-between;
 
-    > picture {
-        margin-right: 112px;
+    picture {
+        margin-left: 60px;
     }
 
     @media (max-width: 1540px) {

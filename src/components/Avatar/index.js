@@ -1,12 +1,32 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import * as S from './styled'
-import imgAvatar from '../../../public/images/avatar.jpg'
 
-const Avatar = () => (
-    <S.AvatarSection>
-        <img src={imgAvatar} alt="" />
-    </S.AvatarSection>
-)
+const Avatar = () => {
+    const { avatarImage } = useStaticQuery(
+        graphql`
+            query {
+                avatarImage: file(relativePath: {eq: "avatar.jpg"}) {
+                    childImageSharp {
+                        fluid {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        `
+    )
+
+    return(
+        <>
+        <S.AvatarSection>
+            <S.ImageAvatar fluid={avatarImage.childImageSharp.fluid} alt="" />
+        </S.AvatarSection>
+        </>
+    )
+
+    
+}
 
 export default Avatar

@@ -1,20 +1,22 @@
 import styled from 'styled-components'
-import Element from '../../../public/images/element-sobre.svg'
+import Element from '../../images/element-sobre.svg'
+import Img from 'gatsby-image'
 
 export const AvatarSection = styled.picture`
     position: relative;
+    width: 100%;
     z-index: 1;
 
     &::before {
         content: '';
         position: absolute;
-        width: calc(100% + 224px);
+        width: 100%;
         height: 365px;
         background: var(--color-one);
         background: linear-gradient(0deg, var(--color-one) 0%, var(--color-gradient-01) 10%, var(--color-gradient-02) 27%, var(--color-gradient-03) 46%, var(--color-four) 100%);
-        left: -112px;
+        left: 50%;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
         z-index: -1;
     }
 
@@ -39,9 +41,18 @@ export const AvatarSection = styled.picture`
             width: 270px;
             height: 84px;
         }
+    }
+`
 
-        > img {
-            max-width: 400px;
-        }
+export const ImageAvatar = styled(Img)`
+    max-width: 508px;
+    max-height: 597px;
+    width: 100%;
+    height: 100%; 
+    margin: 0 auto;
+
+    @media (max-width: 1540px) {
+        max-width: 400px;
+        max-height: 100%;
     }
 `
