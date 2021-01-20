@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 export const Item = styled.div`
     max-width: 450px;
@@ -18,20 +19,24 @@ export const Item = styled.div`
         transition: all 200ms linear;
     }
 
-    h2 {
-        font-family: var(--font-krona);
-        font-size: var(--size-xmedium);
-        line-height: 36px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        font-size: var(--size-xsmall);
-        line-height: 26px;
-    }
-
     @media (max-width: 1540px) {
         max-width: 400px;
         height: 445px;
     }
+`
+
+export const LinkItem = styled(Link)`
+    text-decoration: none;
+`
+
+export const TitleItem = styled.h2`
+    font-family: var(--font-krona);
+    font-size: var(--size-xmedium);
+    line-height: 36px;
+    margin-bottom: 10px;
+`
+
+export const DescriptionItem = styled.p`
+    font-size: var(--size-xsmall);
+    line-height: 26px;
 `
