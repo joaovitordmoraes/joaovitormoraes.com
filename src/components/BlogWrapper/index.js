@@ -7,8 +7,6 @@ export const BlogWrapper = styled.section`
     margin: 112px auto 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
-    
-    cursor: pointer;
 
     ${ButtonStyle} {
         margin: 30px auto 0 auto;
