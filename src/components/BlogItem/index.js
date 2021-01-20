@@ -1,17 +1,27 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 
 import * as S from './styled'
 import Thumb from '../../images/thumb-blog.jpg'
 
-const BlogItem = () => {
+const BlogItem = ({slug, title, description}) => {
     
     return(
-        <S.Item style={{ backgroundImage: `url(${Thumb})` }}>
-            <h2>Lorem ipsum dolor sit amet,</h2>
+        <S.LinkItem to={slug}>
+            <S.Item style={{ backgroundImage: `url(${Thumb})` }}>
+                <S.TitleItem>{title}</S.TitleItem>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </S.Item>
+                <S.DescriptionItem>{description}</S.DescriptionItem>
+            </S.Item>
+        </S.LinkItem>
     )
+}
+
+BlogItem.propTypes = {
+    slug: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
 }
 
 export default BlogItem

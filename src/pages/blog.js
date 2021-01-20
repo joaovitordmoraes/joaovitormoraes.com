@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/Layout/layout'
 import SEO from '../components/seo'
@@ -7,20 +8,55 @@ import { BlogItens, BlogWrapper } from '../components/BlogWrapper'
 import BlogItem from '../components/BlogItem'
 import Button from '../components/Button'
 
-const BlogPage = () => (
-    <Layout>
-        <SEO title="Blog" />
-        
-        <BlogWrapper>
-            <BlogItens>
-                <BlogItem />
-                <BlogItem />
-                <BlogItem />
-            </BlogItens>
 
-            <Button label="Leia mais" />
-        </BlogWrapper>
-    </Layout>
-)
+const BlogPage = () => {
+    const { allMarkdownRemark } = useStaticQuery(
+        graphql`
+            query PostList {
+                allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+                    edges {
+                        node {
+                            fields {
+                                slug
+                            }
+                            frontmatter {
+                                title
+                                description
+                            }
+                        }
+                    }
+                }
+            }
+          
+        `
+    )
+
+    const postList = allMarkdownRemark.edges
+
+    return(
+        <Layout>
+            <SEO title="Blog" />
+            
+            <BlogWrapper>
+                <BlogItens>
+                    {postList.map(({
+                        node: {
+                            frontmatter: {title, description},
+                            fields: {slug}
+                        },
+                    }) => (
+                        <BlogItem
+                            slug={slug}
+                            title={title}
+                            description={description}
+                        />
+                    ))}
+                </BlogItens>
+
+                <Button label="Leia mais" />
+            </BlogWrapper>
+        </Layout>
+    )
+}
 
 export default BlogPage
