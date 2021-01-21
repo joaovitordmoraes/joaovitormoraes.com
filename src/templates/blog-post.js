@@ -1,14 +1,31 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Layout from '../components/Layout/layout'
+import SEO from '../components/seo'
+
+import * as S from './styled'
+import ImgBg from '../images/bg-post.jpg'
+
 const BlogPost = ({ data }) => {
     const post = data.markdownRemark
 
     return(
-        <>
-            <h1>{post.frontmatter.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-        </>
+        <Layout>
+            <SEO title={post.frontmatter.title} />
+
+            <S.PostHeader>
+                <S.PostHeaderWrapper>
+                    <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
+                    <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
+                    <S.PostDate>{post.frontmatter.date}</S.PostDate>
+                </S.PostHeaderWrapper>
+            </S.PostHeader>
+
+            <S.BgPost style={{ backgroundImage: `url(${ImgBg})` }} />
+
+            <S.PostContent dangerouslySetInnerHTML={{ __html: post.html }}></S.PostContent>
+        </Layout>
     )
 }
 
@@ -17,6 +34,8 @@ export const query = graphql`
         markdownRemark(fields: {slug: {eq: $slug}}) {
             frontmatter {
                 title
+                description
+                date(formatString: "DD/MM/YYYY")
             }
             html
         }
