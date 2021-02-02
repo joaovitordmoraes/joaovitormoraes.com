@@ -6,8 +6,10 @@ export const ItemWrapper = styled.div`
     align-items: center;
 `
 
-export const ItemImg = styled.picture`
-    max-width: 500px;
+export const ItemImg = styled.div`
+    max-width: 580px;
+    width: 100%;
+    z-index: 2;
 
     > img {
         width: 100%;
@@ -15,6 +17,22 @@ export const ItemImg = styled.picture`
 `
 
 export const ItemContent = styled.div`
+    max-width: 490px;
+    position: relative;
+    margin-left: 40px;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: var(--color-three);
+        width: calc(100% + 240px);
+        height: 60px;
+        left: 124px;
+        top: -4px;
+        z-index: -1;
+        transform: translateX(calc(-100% - 40px));
+    }
 
     h2 {
         margin-bottom: 28px;
@@ -22,6 +40,10 @@ export const ItemContent = styled.div`
 
     h3 {
         margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 25px;
     }
 
 `
@@ -39,7 +61,7 @@ export const ItemTecnology = styled.h3`
 `
 
 export const ItemDescription = styled.p`
-    font-size: var(--size-xsmall);
+    font-size: var(--size-medium);
     color: var(--color-white);
     line-height: 1.5;
 `

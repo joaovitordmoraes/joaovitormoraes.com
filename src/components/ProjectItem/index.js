@@ -2,22 +2,40 @@ import React from 'react'
 
 import * as S from './styled'
 
-import Img from '../../images/PortfolioJoao_Mockup_Leev.png'
+import Button from '../Button'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
-const ProjectItem = () => {
+const ProjectItem = ({ client, tecnology, description, button, link }) => {
+
+    const { projectImage } = useStaticQuery(
+        graphql`
+            query {
+                projectImage: file(relativePath: {eq: "thumb-Leev.png"}) {
+                    childImageSharp {
+                        fluid {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        `
+    )
 
     return(
         <S.ItemWrapper>
             <S.ItemImg>
-                <img src={Img} alt="" />
+                <Img fluid={projectImage.childImageSharp.fluid} alt="" />
             </S.ItemImg>
 
             <S.ItemContent>
-                <S.ItemTitle>Leev</S.ItemTitle>
-                <S.ItemTecnology>HTML | CSS3 | JavaScript | Wordpress</S.ItemTecnology>
+                <S.ItemTitle>{client}</S.ItemTitle>
+                <S.ItemTecnology>{tecnology}</S.ItemTecnology>
                 <S.ItemDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    {description}
                 </S.ItemDescription>
+
+                <Button label={button} href={link} external/>
             </S.ItemContent>
         </S.ItemWrapper>
     )
