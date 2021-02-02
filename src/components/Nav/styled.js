@@ -9,12 +9,8 @@ export const MenuLinksWrapper = styled.nav`
 
 export const MenuLinksList = styled.ul`
     font-family: var(--font-krona);
-    font-size: var(--size-xsmall);
+    font-size: var(--size-small);
     display: flex;
-
-    @media (max-width: 1540px) {
-        font-size: var(--size-one);
-    }
 `
 
 export const MenuLinksItem = styled.li`

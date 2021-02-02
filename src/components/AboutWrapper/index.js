@@ -38,14 +38,14 @@ export const TextContent = styled.div`
 
     p {
         font-family: var(--font-open);
-        font-size: var(--size-xsmall);
+        font-size: var(--size-medium);
         line-height: 1.6;
         margin-bottom: 32px;
     }
 
     .contact {
         font-family: var(--font-open);
-        font-size: var(--size-xsmall);
+        font-size: var(--size-medium);
         font-weight: 900;
 
         > a {

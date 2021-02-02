@@ -32,11 +32,11 @@ export const LinkItem = styled(Link)`
 export const TitleItem = styled.h2`
     font-family: var(--font-krona);
     font-size: var(--size-xmedium);
-    line-height: 36px;
+    line-height: 1.3;
     margin-bottom: 10px;
 `
 
 export const DescriptionItem = styled.p`
-    font-size: var(--size-xsmall);
-    line-height: 26px;
+    font-size: var(--size-medium);
+    line-height: 1.3;
 `
