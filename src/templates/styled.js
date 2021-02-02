@@ -78,7 +78,7 @@ export const BgPost = styled.div`
 export const PostContent = styled.article`
     max-width: 880px;
     width: 100%;
-    font-size: var(--size-xsmall);
+    font-size: var(--size-medium);
     color: var(--color-white);
     line-height: 1.5;
     margin: 0 auto;

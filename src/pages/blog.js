@@ -53,7 +53,7 @@ const BlogPage = () => {
                     ))}
                 </BlogItens>
 
-                <Button label="Leia mais" />
+                <Button label="Leia mais" href="/" />
             </BlogWrapper>
         </Layout>
     )

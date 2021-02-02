@@ -18,15 +18,12 @@ const Variables = createGlobalStyle`
         --color-gradient-03: #135C5E;
 
         --size-base: 10px;
-        --size-xsmall: 2rem;
-        --size-small: 2.2rem;
-        --size-medium: 2.4rem;
-        --size-xmedium: 3rem;
-        --size-large: 7rem;
-        --size-xlarge: 12rem;
-
-        --size-one: 1.7rem;
-        --size-two: 10rem;
+        --size-xsmall: 1.2rem;
+        --size-small: 1.6rem;
+        --size-medium: 1.8rem;
+        --size-xmedium: 2rem;
+        --size-large: 5rem;
+        --size-xlarge: 10rem;
     }
 `
 

@@ -27,7 +27,29 @@ const ProjectsPage = () => {
 
                 <S.GalleryStyle>
                     <Slider {...settings}>
-                        <ProjectItem />
+                        <ProjectItem 
+                            client="Leev" 
+                            tecnology="HTML | CSS3 | JavaScript | Wordpress" 
+                            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                            button="Visite o site"
+                            link="https://leev-all.com/"
+                        />
+
+                        <ProjectItem 
+                            client="Leev 2" 
+                            tecnology="HTML | CSS3 | JavaScript | Wordpress" 
+                            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                            button="Visite o site"
+                            link="https://leev-all.com/"
+                        />
+
+                        <ProjectItem 
+                            client="Leev 3" 
+                            tecnology="HTML | CSS3 | JavaScript | Wordpress" 
+                            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                            button="Visite o site"
+                            link="https://leev-all.com/"
+                        />
                     </Slider>
                 </S.GalleryStyle>
 

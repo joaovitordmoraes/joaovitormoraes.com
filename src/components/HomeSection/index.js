@@ -28,13 +28,5 @@ export const HomeSection = styled.section`
     @media (max-width: 1540px) {
         height: 500px;
         background-size: contain;
-
-        h1 {
-            font-size: var(--size-two);
-        }
-
-        h2 {
-            font-size: var(--size-medium);
-        }
     }
 `
