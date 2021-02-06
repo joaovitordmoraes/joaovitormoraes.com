@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
-import Layout from "../components/Layout/layout"
-import SEO from "../components/seo"
+import Layout from '../components/Layout/layout'
+import SEO from '../components/seo'
 
-import * as S from "../components/HomeSection"
+import * as S from '../components/HomeSection'
 
 const IndexPage = () => (
   <Layout>

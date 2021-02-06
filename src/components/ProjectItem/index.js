@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import * as S from './styled'
 
@@ -7,38 +8,43 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
 const ProjectItem = ({ client, tecnology, description, button, link }) => {
-
-    const { projectImage } = useStaticQuery(
-        graphql`
-            query {
-                projectImage: file(relativePath: {eq: "thumb-Leev.png"}) {
-                    childImageSharp {
-                        fluid {
-                            ...GatsbyImageSharpFluid
-                        }
-                    }
-                }
+  const { projectImage } = useStaticQuery(
+    graphql`
+      query {
+        projectImage: file(relativePath: { eq: "thumb-Leev.png" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
             }
-        `
-    )
+          }
+        }
+      }
+    `
+  )
 
-    return(
-        <S.ItemWrapper>
-            <S.ItemImg>
-                <Img fluid={projectImage.childImageSharp.fluid} alt="" />
-            </S.ItemImg>
+  return (
+    <S.ItemWrapper>
+      <S.ItemImg>
+        <Img fluid={projectImage.childImageSharp.fluid} alt="" />
+      </S.ItemImg>
 
-            <S.ItemContent>
-                <S.ItemTitle>{client}</S.ItemTitle>
-                <S.ItemTecnology>{tecnology}</S.ItemTecnology>
-                <S.ItemDescription>
-                    {description}
-                </S.ItemDescription>
+      <S.ItemContent>
+        <S.ItemTitle>{client}</S.ItemTitle>
+        <S.ItemTecnology>{tecnology}</S.ItemTecnology>
+        <S.ItemDescription>{description}</S.ItemDescription>
 
-                <Button label={button} href={link} external/>
-            </S.ItemContent>
-        </S.ItemWrapper>
-    )
+        <Button label={button} href={link} external />
+      </S.ItemContent>
+    </S.ItemWrapper>
+  )
+}
+
+ProjectItem.propTypes = {
+  client: PropTypes.string.isRequired,
+  tecnology: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  button: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
 }
 
 export default ProjectItem

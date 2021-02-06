@@ -2,16 +2,16 @@ import React from 'react'
 
 import * as S from './styled'
 import Nav from '../Nav'
-import Logo from '../Logo'
 
 const Header = () => {
-
-    return(
-        <S.HeaderWrapper>
-            <Logo />
-            <Nav />
-        </S.HeaderWrapper>
-    );
+  return (
+    <S.HeaderWrapper>
+      <Nav />
+      <S.Burger>
+        <span></span>
+      </S.Burger>
+    </S.HeaderWrapper>
+  )
 }
 
 export default Header
