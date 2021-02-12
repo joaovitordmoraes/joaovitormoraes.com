@@ -23,6 +23,7 @@ const Variables = createGlobalStyle`
         --size-small: 1.6rem;
         --size-medium: 1.8rem;
         --size-xmedium: 2rem;
+        --size-above-medium: 3rem;
         --size-large: 5rem;
         --size-big: 6.4rem;
         --size-xlarge: 10rem;
