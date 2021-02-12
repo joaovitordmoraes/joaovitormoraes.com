@@ -29,4 +29,17 @@ export const HomeSection = styled.section`
     height: 500px;
     background-size: contain;
   }
+
+  @media (max-width: 576px) {
+    height: auto;
+    padding: 80px 0;
+
+    h1 {
+      font-size: var(--size-big);
+    }
+
+    h2 {
+      font-size: var(--size-medium);
+    }
+  }
 `

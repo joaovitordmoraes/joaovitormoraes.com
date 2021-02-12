@@ -129,7 +129,7 @@ export const HiddenMenu = styled.div`
   z-index: 4;
   top: 50%;
   left: 50%;
-  transform: translate(5000%, -50%);
+  transform: translate(-5000%, -50%);
   opacity: 0;
   transition: opacity 200ms linear;
 
