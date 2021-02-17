@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 export const ItemWrapper = styled.div`
+  width: 100%;
+  outline: 0;
+`
+
+export const Cell = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

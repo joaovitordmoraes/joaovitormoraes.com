@@ -1,50 +1,75 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import Slider from 'react-slick'
 
 import * as S from './styled'
 
 import Button from '../Button'
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
 
-const ProjectItem = ({ client, tecnology, description, button, link }) => {
-  const { projectImage } = useStaticQuery(
-    graphql`
-      query {
-        projectImage: file(relativePath: { eq: "thumb-Leev.png" }) {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+const ProjectItem = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true,
+    arrows: false,
+    customPaging: function (i) {
+      return <div>teste</div>
+    }
+  }
+
+  const data = useStaticQuery(graphql`
+    {
+      allDataJson {
+        edges {
+          node {
+            id
+            client
+            tecnology
+            description
+            button
+            link
+            images {
+              src {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }
       }
-    `
-  )
+    }
+  `)
+
+  const projects = data.allDataJson.edges
 
   return (
-    <S.ItemWrapper>
-      <S.ItemImg>
-        <Img fluid={projectImage.childImageSharp.fluid} alt="" />
-      </S.ItemImg>
+    <Slider {...settings}>
+      {projects.map((item) => (
+        <S.ItemWrapper key={item.node.id}>
+          <S.Cell>
+            <S.ItemImg>
+              <Img fluid={item.node.images.src.childImageSharp.fluid} alt="" />
+            </S.ItemImg>
 
-      <S.ItemContent>
-        <S.ItemTitle>{client}</S.ItemTitle>
-        <S.ItemTecnology>{tecnology}</S.ItemTecnology>
-        <S.ItemDescription>{description}</S.ItemDescription>
+            <S.ItemContent>
+              <S.ItemTitle>{item.node.client}</S.ItemTitle>
+              <S.ItemTecnology>{item.node.tecnology}</S.ItemTecnology>
+              <S.ItemDescription>{item.node.description}</S.ItemDescription>
 
-        <Button label={button} href={link} external />
-      </S.ItemContent>
-    </S.ItemWrapper>
+              <Button label={item.node.button} href={item.node.link} external />
+            </S.ItemContent>
+          </S.Cell>
+        </S.ItemWrapper>
+      ))}
+    </Slider>
   )
-}
-
-ProjectItem.propTypes = {
-  client: PropTypes.string.isRequired,
-  tecnology: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  button: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
 }
 
 export default ProjectItem
