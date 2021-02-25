@@ -9,6 +9,10 @@ export const Cell = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1210px) {
+    flex-direction: column;
+  }
 `
 
 export const ItemImg = styled.div`
@@ -18,6 +22,22 @@ export const ItemImg = styled.div`
 
   > img {
     width: 100%;
+  }
+
+  @media (max-width: 1210px) {
+    max-width: 332px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 67px;
+      background-color: var(--color-three);
+      top: 50%;
+      left: 0;
+      transform: translateY(-100%);
+    }
   }
 `
 
@@ -49,6 +69,44 @@ export const ItemContent = styled.div`
 
   p {
     margin-bottom: 25px;
+  }
+
+  @media (max-width: 1210px) {
+    margin-left: 0;
+
+    &::before {
+      content: none;
+    }
+
+    h2 {
+      font-size: var(--size-above-medium);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    p {
+      font-size: var(--size-small);
+    }
+
+    a {
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h3 {
+      font-size: var(--size-small);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    p {
+      display: none;
+    }
   }
 `
 

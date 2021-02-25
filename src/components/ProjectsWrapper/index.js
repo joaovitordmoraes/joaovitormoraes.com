@@ -1,13 +1,5 @@
 import styled from 'styled-components'
 
-export const ProjectsWrapper = styled.section`
-  max-width: 1520px;
-  width: 100%;
-  margin: 112px auto 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-`
-
 export const GalleryStyle = styled.div`
   .slick-list,
   .slick-slider,
@@ -223,7 +215,7 @@ export const GalleryStyle = styled.div`
   }
 
   .slick-dots {
-    bottom: -25px;
+    bottom: 20px;
     width: 100%;
     margin: 0;
     list-style: none;
@@ -233,53 +225,54 @@ export const GalleryStyle = styled.div`
   .slick-dots li {
     position: relative;
     display: inline-block;
-    width: 20px;
-    height: 20px;
     margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
   }
 
   .slick-dots li button {
     font-size: 0;
+    color: transparent;
     line-height: 0;
     display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
+    width: 10px;
+    height: 10px;
     border: 0;
     outline: 0;
     background: 0 0;
-  }
-
-  .slick-dots li button:focus,
-  .slick-dots li button:hover {
-    outline: 0;
-  }
-
-  .slick-dots li button:focus:before,
-  .slick-dots li button:hover:before {
-    opacity: 1;
+    cursor: pointer;
   }
 
   .slick-dots li button:before {
-    font-size: 6px;
-    line-height: 20px;
     position: absolute;
+    content: '';
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
-    content: '•';
-    text-align: center;
-    opacity: 0.25;
-    color: #000;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-two);
+    border-radius: 50%;
   }
 
   .slick-dots li.slick-active button:before {
-    opacity: 0.75;
-    color: #000;
+    background-color: var(--color-three);
+  }
+`
+
+export const ProjectsWrapper = styled.section`
+  max-width: 1520px;
+  width: 100%;
+  margin: 112px auto 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (max-width: 1540px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1210px) {
+    ${GalleryStyle} {
+      .slick-dots {
+        bottom: -40px;
+      }
+    }
   }
 `

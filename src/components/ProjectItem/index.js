@@ -15,10 +15,7 @@ const ProjectItem = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     draggable: true,
-    arrows: false,
-    customPaging: function (i) {
-      return <div>teste</div>
-    }
+    arrows: false
   }
 
   const data = useStaticQuery(graphql`
