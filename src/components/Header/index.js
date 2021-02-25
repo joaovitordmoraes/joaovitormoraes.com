@@ -6,11 +6,8 @@ import Nav from '../Nav'
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false)
 
-  console.log(activeMenu)
-
   const handleClick = () => {
     setActiveMenu(!activeMenu)
-    console.log(activeMenu)
   }
 
   return (
