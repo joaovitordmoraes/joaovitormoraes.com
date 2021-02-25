@@ -6,7 +6,6 @@ import SEO from '../components/seo'
 
 import { BlogItens, BlogWrapper } from '../components/BlogWrapper'
 import BlogItem from '../components/BlogItem'
-import Button from '../components/Button'
 
 const BlogPage = () => {
   const { allMarkdownRemark } = useStaticQuery(
@@ -21,8 +20,10 @@ const BlogPage = () => {
               frontmatter {
                 title
                 description
+                date(locale: "pt-BR", formatString: "DD/MM/YYYY")
               }
               id
+              timeToRead
             }
           }
         }
@@ -41,9 +42,10 @@ const BlogPage = () => {
           {postList.map(
             ({
               node: {
-                frontmatter: { title, description },
+                frontmatter: { title, description, date },
                 fields: { slug },
-                id
+                id,
+                timeToRead
               }
             }) => (
               <BlogItem
@@ -51,12 +53,12 @@ const BlogPage = () => {
                 slug={slug}
                 title={title}
                 description={description}
+                date={date}
+                timeToRead={timeToRead}
               />
             )
           )}
         </BlogItens>
-
-        <Button label="Leia mais" href="/" />
       </BlogWrapper>
     </Layout>
   )

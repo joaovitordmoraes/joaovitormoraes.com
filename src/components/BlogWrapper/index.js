@@ -16,10 +16,14 @@ export const BlogWrapper = styled.section`
     max-width: 1360px;
     margin-top: 75px;
   }
+
+  @media (max-width: 424px) {
+    margin-top: 40px;
+  }
 `
 
 export const BlogItens = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 `
