@@ -1,5 +1,6 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout/layout'
 import SEO from '../components/seo'
@@ -7,31 +8,8 @@ import SEO from '../components/seo'
 import { BlogItens, BlogWrapper } from '../components/BlogWrapper'
 import BlogItem from '../components/BlogItem'
 
-const BlogPage = () => {
-  const { allMarkdownRemark } = useStaticQuery(
-    graphql`
-      query PostList {
-        allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                description
-                date(locale: "pt-BR", formatString: "DD/MM/YYYY")
-              }
-              id
-              timeToRead
-            }
-          }
-        }
-      }
-    `
-  )
-
-  const postList = allMarkdownRemark.edges
+const BlogList = (props) => {
+  const postList = props.data.allMarkdownRemark.edges
 
   return (
     <Layout>
@@ -64,4 +42,33 @@ const BlogPage = () => {
   )
 }
 
-export default BlogPage
+export const query = graphql`
+  query postList($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+      limit: $limit
+      skip: $skip
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+            date(locale: "pt-BR", formatString: "DD/MM/YYYY")
+          }
+          id
+          timeToRead
+        }
+      }
+    }
+  }
+`
+
+BlogList.propTypes = {
+  data: PropTypes.object.isRequired
+}
+
+export default BlogList
