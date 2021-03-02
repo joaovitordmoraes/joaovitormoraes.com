@@ -40,11 +40,26 @@ export const PostHeader = styled.section`
   @media (max-width: 1540px) {
     max-width: 1360px;
   }
+
+  @media (max-width: 1370px) {
+    max-width: 1024px;
+  }
+
+  @media (max-width: 1024px) {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
 `
 
 export const PostHeaderWrapper = styled.div`
   max-width: 880px;
   width: 100%;
+
+  @media (max-width: 1369px) {
+    max-width: 750px;
+  }
 `
 
 export const PostTitle = styled.h1`
@@ -53,24 +68,36 @@ export const PostTitle = styled.h1`
   color: var(--color-white);
   line-height: 1.2;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: var(--size-above-medium);
+  }
 `
 
 export const PostDescription = styled.p`
   font-size: var(--size-xmedium);
   color: var(--color-white);
   margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    font-size: var(--size-small);
+  }
 `
 
 export const PostDate = styled.p`
   font-size: var(--size-small);
   font-style: italic;
   color: var(--color-white);
+
+  @media (max-width: 768px) {
+    font-size: var(--size-xsmall);
+  }
 `
 
 export const BgPost = styled.div`
   max-width: 1920px;
   width: 100%;
-  height: 630px;
+  height: 430px;
   background-size: cover;
   background-position: center bottom;
 `
@@ -83,4 +110,28 @@ export const PostContent = styled.article`
   line-height: 1.5;
   margin: 0 auto;
   transform: translateY(-300px);
+  box-sizing: border-box;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  code {
+    margin-bottom: 15px;
+  }
+
+  code {
+    display: block;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(--size-small);
+  }
 `
