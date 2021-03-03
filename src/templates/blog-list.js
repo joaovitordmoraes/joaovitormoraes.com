@@ -7,9 +7,16 @@ import SEO from '../components/seo'
 
 import { BlogItens, BlogWrapper } from '../components/BlogWrapper'
 import BlogItem from '../components/BlogItem'
+import Pagination from '../components/Pagination'
 
 const BlogList = (props) => {
   const postList = props.data.allMarkdownRemark.edges
+
+  const { currentPage, numPages } = props.pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage = currentPage - 1 === 1 ? '/blog' : `/page${currentPage - 1}`
+  const nextPage = `/blog/page/${currentPage + 1}`
 
   return (
     <Layout>
@@ -37,6 +44,15 @@ const BlogList = (props) => {
             )
           )}
         </BlogItens>
+
+        <Pagination
+          isFirst={isFirst}
+          isLast={isLast}
+          currentPage={currentPage}
+          numPages={numPages}
+          prevPage={prevPage}
+          nextPage={nextPage}
+        />
       </BlogWrapper>
     </Layout>
   )
@@ -68,7 +84,8 @@ export const query = graphql`
 `
 
 BlogList.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired
 }
 
 export default BlogList
