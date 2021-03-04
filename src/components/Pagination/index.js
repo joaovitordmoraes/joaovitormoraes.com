@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import Arrow from '../../images/arrow.svg'
 
 import * as S from './styled'
 
@@ -14,11 +15,19 @@ const Pagination = ({
 }) => {
   return (
     <S.PaginationWrapper>
-      {!isFirst && <Link to={prevPage}>Página anterior</Link>}
+      {!isFirst && (
+        <Link to={prevPage}>
+          <S.Prev src={Arrow} alt="" />
+        </Link>
+      )}
       <p>
-        {currentPage} de {numPages}
+        <S.Current>{currentPage}</S.Current> de <S.Total>{numPages}</S.Total>
       </p>
-      {!isLast && <Link to={nextPage}>Próxima página</Link>}
+      {!isLast && (
+        <Link to={nextPage}>
+          <S.Next src={Arrow} alt="" />
+        </Link>
+      )}
     </S.PaginationWrapper>
   )
 }
