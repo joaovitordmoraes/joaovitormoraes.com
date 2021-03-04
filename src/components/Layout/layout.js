@@ -5,6 +5,7 @@ import Base from '../../styles/elements/base'
 import Variables from '../../styles/elements/settings'
 
 import Header from '../Header'
+import Footer from '../Footer'
 
 const Layout = ({ children }) => {
   return (
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
       <Base />
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

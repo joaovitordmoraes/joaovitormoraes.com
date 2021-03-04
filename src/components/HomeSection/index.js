@@ -13,7 +13,6 @@ export const HomeSection = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 30px;
 
   h1 {
     font-size: var(--size-xlarge);
