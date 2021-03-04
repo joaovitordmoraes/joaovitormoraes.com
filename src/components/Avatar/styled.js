@@ -3,8 +3,8 @@ import Element from '../../images/element-sobre.svg'
 import Img from 'gatsby-image'
 
 export const ImageAvatar = styled(Img)`
-  max-width: 508px;
-  max-height: 597px;
+  max-width: 400px;
+  max-height: 470px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -13,13 +13,14 @@ export const ImageAvatar = styled(Img)`
 export const AvatarSection = styled.picture`
   position: relative;
   width: 100%;
+  max-width: 600px;
   z-index: 1;
 
   &::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 365px;
+    height: 300px;
     background: var(--color-one);
     background: linear-gradient(
       0deg,
@@ -38,27 +39,31 @@ export const AvatarSection = styled.picture`
   &::after {
     content: '';
     position: absolute;
-    left: -32px;
-    bottom: -55px;
+    left: 60px;
+    bottom: -30px;
     background-image: url(${Element});
     background-size: contain;
     background-repeat: no-repeat;
-    width: 368px;
-    height: 114px;
+    width: 280px;
+    height: 88px;
   }
 
   @media (max-width: 1540px) {
+    max-width: 480px;
+
     &::before {
       height: 280px;
     }
 
     &::after {
-      width: 270px;
-      height: 84px;
+      width: 200px;
+      height: 64px;
+      left: 46px;
+      bottom: -20px;
     }
 
     ${ImageAvatar} {
-      max-width: 400px;
+      max-width: 330px;
       max-height: 100%;
     }
   }

@@ -16,12 +16,16 @@ export const Cell = styled.div`
 `
 
 export const ItemImg = styled.div`
-  max-width: 580px;
+  max-width: 500px;
   width: 100%;
   z-index: 2;
 
   > img {
     width: 100%;
+  }
+
+  @media (max-width: 1540px) {
+    max-width: 500px;
   }
 
   @media (max-width: 1210px) {
@@ -51,7 +55,7 @@ export const ItemContent = styled.div`
     content: '';
     position: absolute;
     background-color: var(--color-three);
-    width: calc(100% + 240px);
+    width: calc(100% + 180px);
     height: 60px;
     left: 124px;
     top: -4px;
@@ -123,7 +127,7 @@ export const ItemTecnology = styled.h3`
 `
 
 export const ItemDescription = styled.p`
-  font-size: var(--size-medium);
+  font-size: var(--size-small);
   color: var(--color-white);
   line-height: 1.5;
 `

@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 export const GalleryStyle = styled.div`
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
   .slick-list,
   .slick-slider,
   .slick-track {
@@ -255,17 +259,25 @@ export const GalleryStyle = styled.div`
   .slick-dots li.slick-active button:before {
     background-color: var(--color-three);
   }
+
+  @media (max-width: 992px) {
+    top: 0;
+    transform: none;
+    margin-bottom: 40px;
+  }
 `
 
 export const ProjectsWrapper = styled.section`
   max-width: 1520px;
   width: 100%;
-  margin: 112px auto 0 auto;
+  height: 720px;
+  margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
 
   @media (max-width: 1540px) {
     margin: 0 auto;
+    height: 500px;
   }
 
   @media (max-width: 1210px) {
@@ -274,5 +286,9 @@ export const ProjectsWrapper = styled.section`
         bottom: -40px;
       }
     }
+  }
+
+  @media (max-width: 992px) {
+    height: auto;
   }
 `

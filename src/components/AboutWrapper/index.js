@@ -67,7 +67,8 @@ export const TextContent = styled.div`
 export const AboutWrapper = styled.section`
   max-width: 1520px;
   width: 100%;
-  margin: 112px auto 0 auto;
+  height: 720px;
+  margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
   display: flex;
@@ -80,7 +81,11 @@ export const AboutWrapper = styled.section`
 
   @media (max-width: 1540px) {
     max-width: 1360px;
-    margin-top: 75px;
+    height: 500px;
+  }
+
+  @media (max-width: 1367px) {
+    max-width: 1280px;
   }
 
   @media (max-width: 992px) {

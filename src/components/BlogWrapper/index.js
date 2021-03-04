@@ -26,4 +26,5 @@ export const BlogItens = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 30px;
 `

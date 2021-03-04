@@ -8,7 +8,7 @@ export const HomeSection = styled.section`
   background-image: url('${img}');
   background-repeat: no-repeat;
   background-position: center;
-  height: 702px;
+  height: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,6 +27,7 @@ export const HomeSection = styled.section`
   @media (max-width: 1540px) {
     height: 500px;
     background-size: contain;
+    min-height: 500px;
   }
 
   @media (max-width: 576px) {
