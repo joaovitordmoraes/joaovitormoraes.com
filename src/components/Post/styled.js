@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import Element01 from '../images/element-post-01.svg'
-import Element02 from '../images/element-post-02.svg'
+import Element01 from '../../images/element-post-01.svg'
+import Element02 from '../../images/element-post-02.svg'
 
 export const PostHeader = styled.section`
   max-width: 1520px;

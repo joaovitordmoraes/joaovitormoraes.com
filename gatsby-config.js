@@ -5,6 +5,7 @@ module.exports = {
     author: `@joaovitordmoraes`
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -20,18 +21,18 @@ module.exports = {
         path: `${__dirname}/posts`
       }
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: []
-      }
-    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
         path: `${__dirname}/src/projects`
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: []
       }
     },
     `gatsby-transformer-sharp`,

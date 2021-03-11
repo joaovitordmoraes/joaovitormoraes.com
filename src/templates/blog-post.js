@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout/layout'
 import SEO from '../components/seo'
 
-import * as S from './styled'
+import * as S from '../components/Post/styled'
 import ImgBg from '../images/bg-post.jpg'
 
 const BlogPost = ({ data }) => {
@@ -19,7 +19,9 @@ const BlogPost = ({ data }) => {
         <S.PostHeaderWrapper>
           <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
           <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
-          <S.PostDate>{post.frontmatter.date}</S.PostDate>
+          <S.PostDate>
+            {post.frontmatter.date} | Tempo de leitura: {post.timeToRead}min
+          </S.PostDate>
         </S.PostHeaderWrapper>
       </S.PostHeader>
 
@@ -41,6 +43,7 @@ export const query = graphql`
         date(formatString: "DD/MM/YYYY")
       }
       html
+      timeToRead
     }
   }
 `
