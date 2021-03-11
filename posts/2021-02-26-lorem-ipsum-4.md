@@ -8,7 +8,7 @@ date: 2021-02-26 05:54:23
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non ante quis nunc fringilla placerat a non nisl. Nunc finibus nunc id imperdiet cursus. Donec viverra maximus augue sit amet cursus. Nunc sit amet tristique augue. Integer varius ex at metus efficitur, non malesuada felis hendrerit. Nulla facilisi. Donec et neque tincidunt, bibendum ante in, aliquam lorem. Sed ornare erat a nibh vehicula feugiat.
 
-![Generic image](./assets/images/generic.png)
+![Generic image](/assets/images/generic.png)
 
 ```javascript
 a=3
