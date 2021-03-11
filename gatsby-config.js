@@ -54,7 +54,9 @@ module.exports = {
               linkImagesToOriginal: false
             }
           },
-          `gatsby-remark-lazy-load`
+          `gatsby-remark-lazy-load`,
+          //needs always to be the last on gatsby-transform-remark
+          `gatsby-remark-prismjs`
         ]
       }
     },
