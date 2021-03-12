@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const CommentsWrapper = styled.section`
   margin: auto;
-  max-width: 70rem;
-  padding: 3rem 6.4rem 3rem;
+  max-width: 800px;
+  padding: 30px;
 
   iframe[src*='ads-iframe'] {
     display: none;

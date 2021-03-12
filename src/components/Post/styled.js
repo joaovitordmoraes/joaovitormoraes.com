@@ -51,6 +51,10 @@ export const PostHeader = styled.section`
       content: none;
     }
   }
+
+  @media (max-width: 576px) {
+    padding-top: 0;
+  }
 `
 
 export const PostHeaderWrapper = styled.div`
@@ -94,12 +98,16 @@ export const PostDate = styled.p`
   }
 `
 
-export const BgPost = styled.div`
-  max-width: 1920px;
-  width: 100%;
-  height: 430px;
-  background-size: cover;
-  background-position: center bottom;
+export const PostContentWrapper = styled.section`
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 200px 0;
+
+  @media (max-width: 576px) {
+    background-image: none !important;
+    padding: 0;
+  }
 `
 
 export const PostContent = styled.article`
@@ -109,7 +117,6 @@ export const PostContent = styled.article`
   color: var(--color-white);
   line-height: 1.5;
   margin: 0 auto;
-  transform: translateY(-300px);
   box-sizing: border-box;
 
   h1,

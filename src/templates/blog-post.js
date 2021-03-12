@@ -26,11 +26,11 @@ const BlogPost = ({ data }) => {
         </S.PostHeaderWrapper>
       </S.PostHeader>
 
-      <S.BgPost style={{ backgroundImage: `url(${ImgBg})` }} />
-
-      <S.PostContent
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      ></S.PostContent>
+      <S.PostContentWrapper style={{ backgroundImage: `url(${ImgBg})` }}>
+        <S.PostContent
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        ></S.PostContent>
+      </S.PostContentWrapper>
 
       <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>
