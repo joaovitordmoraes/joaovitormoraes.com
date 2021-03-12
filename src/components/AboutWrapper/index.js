@@ -126,6 +126,7 @@ export const AboutWrapper = styled.section`
 
   @media (max-width: 576px) {
     margin-top: 50px;
+    height: auto;
 
     ${TextContent} {
       h1 {

@@ -33,6 +33,7 @@ export const HomeSection = styled.section`
   @media (max-width: 576px) {
     height: auto;
     padding: 80px 0;
+    min-height: auto;
 
     h1 {
       font-size: var(--size-big);
