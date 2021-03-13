@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { TransitionPortal } from 'gatsby-plugin-transition-link'
 import Reset from '../../styles/generic/reset'
 import Base from '../../styles/elements/base'
 import Variables from '../../styles/elements/settings'
@@ -13,7 +14,9 @@ const Layout = ({ children }) => {
       <Reset />
       <Variables />
       <Base />
-      <Header />
+      <TransitionPortal level="top">
+        <Header />
+      </TransitionPortal>
       <main>{children}</main>
       <Footer />
     </>

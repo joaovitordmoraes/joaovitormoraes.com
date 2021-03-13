@@ -6,7 +6,7 @@ import Thumb from '../../images/thumb-blog.png'
 
 const BlogItem = ({ slug, title, description, date, timeToRead }) => {
   return (
-    <S.LinkItem to={slug}>
+    <S.LinkItem to={slug} cover direction="right" bg="#1C1C1C" duration={0.6}>
       <S.ImageItem src={Thumb} alt="" />
       <S.LinkContent>
         <S.TitleItem>{title}</S.TitleItem>

@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Arrow from '../../images/arrow.svg'
@@ -16,17 +16,29 @@ const Pagination = ({
   return (
     <S.PaginationWrapper>
       {!isFirst && (
-        <Link to={prevPage}>
+        <AniLink
+          to={prevPage}
+          cover
+          direction="left"
+          bg="#1C1C1C"
+          duration={0.6}
+        >
           <S.Prev src={Arrow} alt="" />
-        </Link>
+        </AniLink>
       )}
       <p>
         <S.Current>{currentPage}</S.Current> de <S.Total>{numPages}</S.Total>
       </p>
       {!isLast && (
-        <Link to={nextPage}>
+        <AniLink
+          to={nextPage}
+          cover
+          direction="right"
+          bg="#1C1C1C"
+          duration={0.6}
+        >
           <S.Next src={Arrow} alt="" />
-        </Link>
+        </AniLink>
       )}
     </S.PaginationWrapper>
   )

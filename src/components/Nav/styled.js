@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export const MenuLinksWrapper = styled.nav`
   background-color: var(--color-one);
@@ -19,7 +19,7 @@ export const MenuLinksItem = styled.li`
   }
 `
 
-export const MenuLinksLink = styled(Link)`
+export const MenuLinksLink = styled(AniLink)`
   color: var(--color-two);
   text-decoration: none;
   transition: 150ms;
