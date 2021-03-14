@@ -76,22 +76,41 @@ export const Burger = styled.div`
 `
 
 export const HeaderWrapper = styled.header`
+  width: 100%;
+  background-color: var(--color-one);
+  padding: 90px 20px 40px 20px;
+  box-sizing: border-box;
+  transition: padding 150ms linear;
+  min-height: 126px;
+
+  &.-floating {
+    transition: padding 150ms linear;
+    box-shadow: 0 3px 4px var(--color-shadow);
+    padding: 40px 20px;
+    min-height: 96px;
+  }
+
+  @media (max-width: 1540px) {
+    padding-top: 70px;
+  }
+
+  @media (max-width: 992px) {
+    padding-top: 45px;
+  }
+`
+
+export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
   max-width: 1520px;
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
+  margin: 0 auto;
   position: relative;
-  margin: 90px auto 40px auto;
 
   &::before {
     content: '';
     position: absolute;
     left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
     width: calc(100% - 40px);
     height: 1px;
     background-color: var(--color-two);
@@ -99,7 +118,6 @@ export const HeaderWrapper = styled.header`
 
   @media (max-width: 1540px) {
     max-width: 1360px;
-    margin-top: 70px;
 
     ${Burger} {
       display: none;
@@ -108,7 +126,6 @@ export const HeaderWrapper = styled.header`
 
   @media (max-width: 992px) {
     width: 100%;
-    margin: 45px 0;
 
     &::before {
       width: calc(100% - 100px);
@@ -125,7 +142,7 @@ export const HeaderWrapper = styled.header`
 `
 
 export const HiddenMenu = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 4;
   top: 50%;
   left: 50%;

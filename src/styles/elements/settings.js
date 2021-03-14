@@ -7,6 +7,7 @@ const Variables = createGlobalStyle`
         --font-open: 'Open Sans', sans-serif;
         
         --color-black: #000000;
+        --color-shadow: rgba(0, 0, 0, 0.5);
         --color-white: #ffffff;
         --color-one: #1C1C1C;
         --color-two: #777777;

@@ -4,7 +4,7 @@ import { ButtonStyle } from '../Button/styled'
 export const BlogWrapper = styled.section`
   max-width: 1520px;
   width: 100%;
-  margin: 112px auto 0 auto;
+  margin: 40px auto 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
 
@@ -14,7 +14,7 @@ export const BlogWrapper = styled.section`
 
   @media (max-width: 1540px) {
     max-width: 1360px;
-    margin-top: 75px;
+    margin-top: 0;
   }
 
   @media (max-width: 424px) {
