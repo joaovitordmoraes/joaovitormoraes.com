@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: joaovitordmoraes/portfolio
-  branch: develop
-  site_domain: https://joaovitormoraes.netlify.app/
+  repo: joaovitordmoraes/joaovitormoraes.com
+  branch: master
+  site_domain: https://joaovitormoraes-com.vercel.app/
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/img'
