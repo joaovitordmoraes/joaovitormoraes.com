@@ -14,7 +14,11 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        image={post.frontmatter.image}
+      />
 
       <S.PostHeader>
         <S.PostHeaderWrapper>
@@ -47,6 +51,7 @@ export const query = graphql`
         title
         description
         date(formatString: "DD/MM/YYYY")
+        image
       }
       html
       timeToRead

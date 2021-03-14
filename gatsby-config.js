@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `João Vitor`,
-    description: `Trabalho na área de Desenvolvimento Front-End desde 2011 e desde então eu crio sites, landing pages e páginas interativas para eventos. Ultimamente tenho estudado muito sobre ReactJS, aplicando o que aprendo em alguns projetos pessoais.`,
-    author: `@joaovitordmoraes`
+    description: `Trabalho na área de Desenvolvimento Front-End desde 2012 e desde então eu crio sites, landing pages e páginas interativas para eventos. Ultimamente tenho estudado muito sobre ReactJS, aplicando o que aprendo em alguns projetos pessoais.`,
+    author: `@joaovitordmoraes`,
+    siteUrl: `https://joaovitormoraes.netlify.app`
   },
   plugins: [
     `gatsby-plugin-transition-link`,
@@ -66,11 +67,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `João Vitor Moraes`,
+        short_name: `João Moraes`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1C1C1C`,
+        theme_color: `#1C1C1C`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }
@@ -81,9 +82,10 @@ module.exports = {
         fonts: [`Open Sans`, `source sans pro\:300,400,400i,700`, `Krona One`],
         display: 'swap'
       }
-    }
+    },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`
   ]
 }

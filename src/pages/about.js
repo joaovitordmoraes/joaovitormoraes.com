@@ -24,7 +24,7 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="Sobre mim" />
       <S.AboutWrapper>
         <S.TextContent className="title-mobile">
           <h1>Sobre mim</h1>

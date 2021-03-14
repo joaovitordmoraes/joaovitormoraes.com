@@ -2,6 +2,7 @@
 title: Lorem ipsum dolor sit amet,
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 date: 2021-02-26 05:54:23
+image: '/assets/images/lake.jpg'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non ante quis nunc fringilla placerat a non nisl. Nunc finibus nunc id imperdiet cursus. Donec viverra maximus augue sit amet cursus. Nunc sit amet tristique augue. Integer varius ex at metus efficitur, non malesuada felis hendrerit. Nulla facilisi. Donec et neque tincidunt, bibendum ante in, aliquam lorem. Sed ornare erat a nibh vehicula feugiat.
