@@ -2,7 +2,7 @@ backend:
   name: github
   repo: joaovitordmoraes/joaovitormoraes.com
   branch: master
-  site_domain: joaovitormoraes-com.vercel.app
+  site_domain: joaovitormoraes.netlify.app
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/img'

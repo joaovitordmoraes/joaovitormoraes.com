@@ -3,7 +3,7 @@ module.exports = {
     title: `João Vitor`,
     description: `Trabalho na área de Desenvolvimento Front-End desde 2012 e desde então eu crio sites, landing pages e páginas interativas para eventos. Ultimamente tenho estudado muito sobre ReactJS, aplicando o que aprendo em alguns projetos pessoais.`,
     author: `@joaovitordmoraes`,
-    siteUrl: `https://joaovitormoraes-com.vercel.app`
+    siteUrl: `https://joaovitormoraes.netlify.app`
   },
   plugins: [
     `gatsby-plugin-transition-link`,
