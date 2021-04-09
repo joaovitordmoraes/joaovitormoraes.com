@@ -16,10 +16,10 @@
             "src": "../images/thumb-Speedcast.png"
         },
         "client": "Speedcast",
-        "tecnology": "HTML | CSS3 | JavaScript | Wordpress",
+        "tecnology": "HTML | CSS3 | JavaScript",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "button": "Visite o site",
-        "link": "https://leev-all.com/"
+        "link": "https://www.speedcast.com.br/"
     },
     {
         "id": "3",
@@ -27,10 +27,10 @@
             "src": "../images/thumb-ThinkCare.png"
         },
         "client": "Thinkcare",
-        "tecnology": "HTML | CSS3 | JavaScript | Wordpress",
+        "tecnology": "HTML | CSS3 | JavaScript",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "button": "Visite o site",
-        "link": "https://leev-all.com/"
+        "link": "http://thinkcare.com.br/"
     },
     {
         "id": "4",
@@ -38,9 +38,9 @@
             "src": "../images/thumb-NSX.png"
         },
         "client": "NSX",
-        "tecnology": "HTML | CSS3 | JavaScript | Wordpress",
+        "tecnology": "HTML | CSS3 | JavaScript",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "button": "Visite o site",
-        "link": "https://leev-all.com/"
+        "link": "https://www.nsxbr.com/"
     }
 ]
